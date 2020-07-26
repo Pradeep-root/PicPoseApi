@@ -4,4 +4,7 @@ module.exports = app => {
   // Create a new pose
   app.post("/create_pose", pose.create);
 
+  // Get list of poses
+  app.get("/all_pose", pose.findAll);
+
 };

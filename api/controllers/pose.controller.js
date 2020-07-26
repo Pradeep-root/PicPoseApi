@@ -26,3 +26,15 @@ exports.create = (req, res) =>{
      else res.send(data);
    });
  };
+
+ // Get all records
+ exports.findAll = (req, res) =>{
+   Pose.getAll((err, data) =>{
+     if (err)
+      res.status(500).send({
+        message:
+          err.message || "Some error occurred while retrieving pose list."
+      });
+      else res.send(data);
+   });
+ }
