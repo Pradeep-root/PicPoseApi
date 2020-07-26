@@ -17,7 +17,7 @@ exports.create = (req, res) =>{
  });
 
  //Save pose into databse
-   Pose.create(customer, (err, data) => {
+   Pose.create(pose, (err, data) => {
      if (err)
        res.status(500).send({
          message:
